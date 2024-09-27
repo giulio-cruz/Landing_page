@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNDERTALE store - sobre o jogo e compras</title>
+    <link rel="stylesheet" href="./css/lan_pag.css">
+    <link rel="shortcut icon" href="./imagens/Determinacao.jpg" type="image/x-icon">
+</head>
+<body>
+    <header>
+        
+        <div class="cabecalho">
+            <h1>Undertale</h1>
+            <a href="#" class="button">Sobre</a>
+            <a href="#" class="button">Demo</a>
+            <a href="#" class="button">Entre em contato</a>
+            <a href="./heart.html"><img  class= "layoutImg"src="./imagens/Determinacao.jpg"></a>
+
+        </div>
+    </header>
+    
+    <div class="first_img">
+        <img src= "./imagens/logo.png"  width="30%">
+        <div class="text">
+            <p>Undertale é um RPG para PC, Mac, Linux, PS4, PSVita, Nintendo Switch e Xbox One.</p><br>
+            <p>Neste RPG, você não precisa matar ninguém.
+                Cada inimigo pode<br> ser "derrotado" de forma não violenta.
+                Dance com um slime.<br> Acaricie um cachorro. Sussurre seu segredo favorito para um cavaleiro.<br>
+                Ou ignore essa escolha e faça chover destruição sobre seus inimigos.<br>Mas sua jornada exigirá determinação.
+                Cada adversário tem padrões de falas<br> únicos dos quais você também deve se esquivar.<br>Ênfase no humor, no diálogo dos personagens e na escolha do jogador.<br>
+                Tempo médio de jogo: 6 horas.</p><br>
+        </div>
+    </div>
+
+    <p>Não sei por quê...<br>
+        Mas muitas pessoas adoram esse jogo.<br>
+        Quem sabe. Você pode amar também.</p><br>
+    <div class="paisagem"></div>
+
+    <table id="tabela-lan_pag">
+        <tr>
+            <th>PLATAFORMAS</th><br>
+            <td>NINTENDO SWITCH</td>
+            <td>PC</td>
+            <td>PS4</td>
+            <td>PS VITA</td>
+            <td>XBOX</td>
+        </tr>
+        <tr>
+            <th>IDIOMAS</th>
+            <td>INGLÊS</td>
+            <td>JAPONÊS</td>
+            <td>ESPANHOL</td>
+            <td>MANDARIM</td>
+            <td>PORTUGUÊS (PT-BR)</td>
+        </tr>
+
+    <p>Plataformas e idiomas disponíveis</p>
+    </table>
+
+    <div class="formulario">
+        <form id="cadastrar">
+            <h1>Cadastre-se e receba avisos sobre promoções e conteúdos novos</h1>
+            <input type="text" id="txtNome" name="txtNome" placeholder="Nome"><br>
+            <span id="error-nome" class="input-error">Nome não preenchido</span>
+            <label for="txtEmail"></label><br>
+            <input type="text" id="txtEmail" name="txtEmail" placeholder="E-mail"><br>
+            <span id="error-email" class="input-error">E-mail não preenchido</span>
+            <button type="button" onclick="cadastraUser()">Cadastrar</button>
+            <span id="sucesso" class="sucesso">Cadastro realizado</span>
+        </form>
+    </div>
+
+    <div class="mouse">
+        <img src="./imagens/dog.jpg" width="5%">
+        <p>Espero que você goste de Undertale.</p>
+    </div>
+</body>
+
+<script>
+    function cadastraUser(){
+        var nome = document.getElementById("txtNome").value;
+        var email = document.getElementById("txtEmail").value;
+
+        if (nome.length == 0){
+            document.getElementById("error-nome").style.display = "block";
+        }else{
+            document.getElementById("error-nome").style.display = "none";
+        }
+
+        if (email.length == 0){
+            document.getElementById("error-email").style.display = "block";
+        }else{
+            document.getElementById("error-email").style.display = "none";
+        }
+
+        if (nome.length !=0 && email.length !=0){
+            document.getElementById("sucesso").style.display = "block";
+        }else{
+            document.getElementById("sucesso").style.display = "none";
+        }
+    }
+</script>
+</html>
